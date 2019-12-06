@@ -15,21 +15,22 @@ public class CollectableCheck : MonoBehaviour
     {
         count = 0;
         interactText.text = "";
-        countText.text = "";
+        countText.text = "hello";
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Collectable"))
+        if (other.tag == "Collectable")
         {
+            print("Collision Occured");
+            /*setInteractText("Press [E] to Interact");
             interactText.gameObject.SetActive(true);
-            setInteractText("Press [E] to Interact");
             if (Input.GetKeyDown("e"))
             {
                 other.gameObject.SetActive(false);
                 setCountText();
+                setInteractText("Wonder if there's anything else");
             }
-            setInteractText("Wonder if there's anything else");
-
+            */
         }
     }
 
