@@ -21,6 +21,7 @@ public class CollectableCheck : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Collectable"))
         {
+            interactText.gameObject.SetActive(true);
             setInteractText("Press [E] to Interact");
             if (Input.GetKeyDown("e"))
             {
