@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Collectable
+  - Spotlight1
+  - Spotlight2
+  - Spotlight3
+  - Collectable2
+  - Collectable3
   layers:
   - Default
   - TransparentFX

@@ -9,28 +9,61 @@ public class CollectableCheck : MonoBehaviour
     private int count;
     public Text countText;
     public Text interactText;
-    public Text strongholdText;
+    public Text eventText;
 
     void Awake()
     {
         count = 0;
-        interactText.text = "";
-        countText.text = "hello";
+        interactText.text = "What is this place?";
+        countText.text = "";
+        eventText.text = "Objective: Explore the Wasteland";
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Collectable")
         {
-            print("Collision Occured");
-            /*setInteractText("Press [E] to Interact");
-            interactText.gameObject.SetActive(true);
-            if (Input.GetKeyDown("e"))
+            if (count < 1)
             {
+                print("Collision Occured");
                 other.gameObject.SetActive(false);
                 setCountText();
-                setInteractText("Wonder if there's anything else");
+                setInteractText("What's this? Wonder if there's anything else...");
+                createPathways(count);
             }
-            */
+        }
+        if(other.tag == "Collectable2")
+        {
+            if (count == 1)
+            {
+                print("Collision 2 Occured");
+                other.gameObject.SetActive(false);
+                setCountText();
+                setInteractText("Another one? What do they lead to?");
+                createPathways(count);
+            }
+        }
+    }
+
+    void createPathways(int c)
+    {
+        GameObject[] pathwayArray;
+
+        if(c == 1)
+        {
+            pathwayArray = GameObject.FindGameObjectsWithTag("Spotlight1");
+            foreach (GameObject go in pathwayArray)
+            {
+                go.SetActive(false);
+            }
+        }
+        if (c == 2)
+        {
+            pathwayArray = GameObject.FindGameObjectsWithTag("Spotlight2");
+            foreach (GameObject go in pathwayArray)
+            {
+                go.SetActive(false);
+            }
         }
     }
 
@@ -45,7 +78,7 @@ public class CollectableCheck : MonoBehaviour
         countText.text = "Collected:" + count.ToString() + "/3";
         if(count >= 3)
         {
-            strongholdText.text = "Stronghold has been revealed";
+            eventText.text = "Stronghold has been revealed";
         }
     }
 }
