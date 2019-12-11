@@ -2657,7 +2657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f282d9fb9b399dd4384b20aba08642fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.628128
+      value: 18.81
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f282d9fb9b399dd4384b20aba08642fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16447,7 +16447,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: b8d0d9b8801b5d947ae693f172debd3f, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: b8d0d9b8801b5d947ae693f172debd3f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -19240,6 +19240,25 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &524883017 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: 2698c90f4dbe0a140b215a5aa6edd155,
+    type: 3}
+  m_PrefabInstance: {fileID: 700004378}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &524883018
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524883017}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!43 &526009215
 Mesh:
   m_ObjectHideFlags: 0
@@ -27673,7 +27692,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100004, guid: 2698c90f4dbe0a140b215a5aa6edd155, type: 3}
       propertyPath: m_Name
-      value: Chest_0002
+      value: Collectable 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 2698c90f4dbe0a140b215a5aa6edd155, type: 3}
+      propertyPath: m_TagString
+      value: Collectable3
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 2698c90f4dbe0a140b215a5aa6edd155, type: 3}
       propertyPath: m_LocalPosition.x
@@ -41219,6 +41242,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8199628885135419327, guid: b2bcd9b314b37be42a461a6ce1b68bfe,
+        type: 3}
+      propertyPath: m_TagString
+      value: Fortress
+      objectReference: {fileID: 0}
     - target: {fileID: 8199628885135419325, guid: b2bcd9b314b37be42a461a6ce1b68bfe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -41257,7 +41285,7 @@ PrefabInstance:
     - target: {fileID: 8199628885135419325, guid: b2bcd9b314b37be42a461a6ce1b68bfe,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8199628885135419325, guid: b2bcd9b314b37be42a461a6ce1b68bfe,
         type: 3}
@@ -64781,7 +64809,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 2698c90f4dbe0a140b215a5aa6edd155, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 2698c90f4dbe0a140b215a5aa6edd155, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -68781,6 +68809,7 @@ MonoBehaviour:
   countText: {fileID: 1271782554}
   interactText: {fileID: 1840465788}
   eventText: {fileID: 2022626784}
+  fortress: {fileID: 0}
 --- !u!43 &1653411350
 Mesh:
   m_ObjectHideFlags: 0
@@ -84756,7 +84785,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

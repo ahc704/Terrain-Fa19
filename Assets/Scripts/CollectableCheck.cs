@@ -10,6 +10,7 @@ public class CollectableCheck : MonoBehaviour
     public Text countText;
     public Text interactText;
     public Text eventText;
+    public GameObject fortress;
 
     void Awake()
     {
@@ -43,6 +44,20 @@ public class CollectableCheck : MonoBehaviour
                 createPathways(count);
             }
         }
+        if (other.tag == "Collectable3")
+        {
+            if (count == 3)
+            {
+                print("Collision 3 Occured");
+                other.gameObject.SetActive(false);
+                setCountText();
+                setInteractText("Hey Anoth-...Whoa, what's that!?");
+                createPathways(count);
+                fortress = GameObject.FindGameObjectWithTag("Fortress");
+                fortress.SetActive(true);
+                
+            }
+        }
     }
 
     void createPathways(int c)
@@ -60,6 +75,14 @@ public class CollectableCheck : MonoBehaviour
         if (c == 2)
         {
             pathwayArray = GameObject.FindGameObjectsWithTag("Spotlight2");
+            foreach (GameObject go in pathwayArray)
+            {
+                go.SetActive(false);
+            }
+        }
+        if (c == 3)
+        {
+            pathwayArray = GameObject.FindGameObjectsWithTag("Spotlight3");
             foreach (GameObject go in pathwayArray)
             {
                 go.SetActive(false);

@@ -10,6 +10,7 @@ TagManager:
   - Spotlight3
   - Collectable2
   - Collectable3
+  - Fortress
   layers:
   - Default
   - TransparentFX
