@@ -46,14 +46,13 @@ public class CollectableCheck : MonoBehaviour
         }
         if (other.tag == "Collectable3")
         {
-            if (count == 3)
+            if (count == 2)
             {
                 print("Collision 3 Occured");
                 other.gameObject.SetActive(false);
                 setCountText();
                 setInteractText("Hey Anoth-...Whoa, what's that!?");
                 createPathways(count);
-                fortress = GameObject.FindGameObjectWithTag("Fortress");
                 fortress.SetActive(true);
                 
             }
